@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Smart Content Toolkit 1.0.0\n"
+"Report-Msgid-Bugs-To: https://example.com\n"
+"POT-Creation-Date: 2026-01-27 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Smart Content Toolkit\n"
+"X-Domain: smart-content-toolkit\n"
+
+
+#: smart-content-toolkit.php
+msgid "Smart Content Toolkit"
+msgstr ""
+
+#: includes/admin-menu.php
+msgid "Tag-Link"
+msgstr ""
+
+#: includes/admin-menu.php
+msgid "Pagination"
+msgstr ""
+
+#: about.php
+msgid "Auto internal linking berbasis Tag"
+msgstr ""
+
+#: about.php
+msgid "Smart SEO Pagination"
+msgstr ""
+
+#: about.php
+msgid "Optimized untuk konten panjang"
+msgstr ""
+
+#: about.php
+msgid "Aman untuk production"
+msgstr ""
