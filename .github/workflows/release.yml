@@ -1,0 +1,37 @@
+name: Build & Deploy WordPress Plugin
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set version
+      run: |
+        VERSION=${GITHUB_REF#refs/tags/v}
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Create ZIP
+      run: |
+        mkdir build
+        rsync -av --exclude='.git*' --exclude='node_modules' ./ build/bagong-content-petty-kit
+        cd build
+        zip -r ../bagong-content-petty-kit-${VERSION}.zip bagong-content-petty-kit
+
+    - name: Upload Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: bagong-content-petty-kit-${{ env.VERSION }}.zip
+
+    - name: Deploy to WordPress.org
+      uses: 10up/action-wordpress-plugin-deploy@stable
+      env:
+        SVN_USERNAME: ${{ secrets.WP_SVN_USER }}
+        SVN_PASSWORD: ${{ secrets.WP_SVN_PASS }}
+        SLUG: bagong-content-petty-kit
